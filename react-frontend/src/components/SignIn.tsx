@@ -1,11 +1,15 @@
 import React from "react";
+import axios from "axios";
 
 const SignIn = () => {
 
     // button on click event
-    function onClick() {
+    function signInClick() {
         console.log("button clicked");
-        console.log("username: " + (document.querySelector("input[type=text]") as HTMLInputElement).value);
+        // store input in a variable
+        // send input to backend
+
+
     }
 
   return (
@@ -13,7 +17,7 @@ const SignIn = () => {
       <h1>Sign In</h1>
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
-        <button onClick={onClick}>Sign In</button>
+        <button onClick={signInClick}>Sign In</button>
     </div>
   );
 };
