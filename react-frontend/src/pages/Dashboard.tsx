@@ -1,29 +1,26 @@
 import React from "react";
 import Post from "../components/Post";
+import SearchBar from "../components/Dashboard/SearchBar";
+import UserInfo from "../components/Dashboard/UserInfo";
+import Notifications from "../components/Dashboard/Notifications";
+import '../styles/Dashboard.css';
 
 // a dashboard welcome page
-
-// function that takes in how many posts are there and generates that many post components
-function generatePosts(numPosts: number) {
-    const posts = [];
-    for (let i = 0; i < numPosts; i++) {
-        posts.push(<Post title={"Post " + (i + 1)} content={"This is post number " + (i + 1) + "."} />);
-    }
-    return posts;
-}
 
 
 const Dashboard = () => {
 
     // call generatePosts to generate 5 posts
-    const posts = generatePosts(3);
-
     // include the posts in the return statement
     return (
         <div>
-            <h1 className="header-style">Welcome to the Dashboard!</h1>
+            <h1 className="header-style">Dashboard!</h1>
+            <SearchBar />
+            <Notifications />
+            <div className="profile-info-div">
+                <UserInfo name="Meghna" num_posts={3} />
+            </div>
             <div className="post-container">
-                {posts}
             </div>
         </div>
     );

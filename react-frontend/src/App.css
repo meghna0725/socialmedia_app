@@ -3,26 +3,6 @@
 }
 
 body {
-  background-size: cover;
-  background-color: lightskyblue;
+  background: #E6E6FA;
+  background: linear-gradient(90deg, rgba(251,249,250,1) 0%, rgba(211,207,230,1) 100%);
 }
-
-/*keyframe animation of sign in logo */
-@keyframes sign_in_logo {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-

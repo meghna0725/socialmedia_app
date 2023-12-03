@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .box-div {
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin-top: 20vh;
+    margin-bottom: auto;
+    margin-right: 80px;
+    margin-left: 80px;
+    padding: 10px;
+    height: 60vh;
+    opacity: 0.9;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  }
+  
+  .box-div-child {
+    flex: 1;
+  }
+  
+  .color-div {
+    background-color: purple;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    padding: 20px;
+  }
+  
+  .sign-in-input {
+    border-radius: 10px;
+    height: 40px;
+    font-size: medium;
+    border: none;
+    background-color: rgb(237, 237, 248);
+    margin-bottom: 10px;
+  }
+  
+  .sign-in-button {
+    background-color: #964caf;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: medium;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+  
+  .button:hover {
+    scale: 1.5;
+  }
+  
+  .color-div h1 {
+    margin: 0;
+  }
+  

@@ -1,0 +1,11 @@
+.post-container {
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.profile-info-div {
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: 50%;
+    height: 20vh;
+}

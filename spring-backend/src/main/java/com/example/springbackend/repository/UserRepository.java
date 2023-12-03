@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 import com.example.springbackend.controllers.UserController;
 import java.util.ArrayList;
 
+// FIXME configure neo4j repository
+
 @Repository
 public interface UserRepository extends Neo4jRepository<UserController, Long>{
     public UserController findByName(String name);
