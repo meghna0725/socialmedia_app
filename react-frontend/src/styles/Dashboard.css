@@ -1,11 +1,5 @@
-.post-container {
-    background-color: aliceblue;
-    border-radius: 20px;
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
 }
 
-.profile-info-div {
-    background-color: aliceblue;
-    border-radius: 20px;
-    width: 50%;
-    height: 20vh;
-}

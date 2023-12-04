@@ -5,6 +5,7 @@ import '../../styles/Dashboard.css';
 
 const Notifications = () => {
     const [isOpen, setIsOpen] = React.useState(false);
+    const defaultMessage = "No new notifications";
 
     const onClickHandler = () => {
         console.log("clicked");
@@ -19,6 +20,7 @@ const Notifications = () => {
             {isOpen && (
                 <div>
                     <h2>Notifications</h2>
+                    {defaultMessage}
                 </div>
             )}
         </div>
