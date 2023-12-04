@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './styles/Dashboard.css';
 import SignIn from './components/SignIn';
 import Dashboard from './pages/Dashboard';
 import SignInPage from './pages/SignInPage';

@@ -5,7 +5,7 @@ import '../../styles/Dashboard.css';
 
 const CreatePost = () => {
     return (
-        <div>
+        <div className='post-container'>
             <input className='input-post' type="text" placeholder="Title" />
             <button className='post-button' type="submit">Post</button>
         </div>

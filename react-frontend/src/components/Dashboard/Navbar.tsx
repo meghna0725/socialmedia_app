@@ -1,5 +1,6 @@
 import { Link, Box } from "@mui/material";
 import * as React from "react";
+import UserInfo from "./UserInfo";
 
 function IconHomeAlt(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -64,12 +65,18 @@ function IconMail(props: React.SVGProps<SVGSVGElement>) {
 const Navbar = () => {
     return (
         <div className="navbar">
+
+            <div className="title-h1">
+                <h1>add title later</h1>
+            </div>
+
             <ul className="nav-menu">
                 <li><a href="/dashboard"><IconHomeAlt /> Home </a></li>
                 <li><a href="/messages"><IconMail /> Messages </a></li>
                 <li><a href="/analytics"><IconAnalytics /> Analytics </a></li>
                 <li><a href="/profile"><IconProfile /> Profile </a></li>
             </ul>
+
         </div>
     );
 };

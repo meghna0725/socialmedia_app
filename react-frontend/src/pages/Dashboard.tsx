@@ -12,6 +12,15 @@ const Dashboard = () => {
     return (
         <div className="dashboard-container">
             <Navbar />
+
+            <div className="features-container">
+                <SearchBar />
+                <Notifications />
+            </div>
+
+            <div className="create-post-container">
+                <CreatePost />
+            </div>
         </div>
     );
 };
