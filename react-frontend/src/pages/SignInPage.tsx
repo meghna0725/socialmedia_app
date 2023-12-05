@@ -8,39 +8,19 @@ interface SignInProps {
   password: string;
 }
 
-// TODO add three.js animation to title
-const Title = () => {
-  return (
-    <div className="title-div">
-      <h1 className="title">myworld</h1>
-    </div>
-  );
-};
-
 const SignInPage = () => {
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
   // Initialize the navigate function
   const navigate = useNavigate();
 
   // axios post request to sign in
-  const onSignIn = () => {
+  const onSignIn = (e: any) => {
+    e.preventDefault(); // Prevent default form submission behavior
     axios
-      .post("http://localhost:5000/signin", {
-        username: "test",
-        password: "test",
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  const onCreateAccount = () => {
-    axios
-      .post("http://localhost:5000/createaccount", {
-        username: "test",
-        password: "test",
+      .post("http://localhost:8080/signin", {
+        username: username,
+        password: password,
       })
       .then((response) => {
         console.log(response);
@@ -61,25 +41,27 @@ const SignInPage = () => {
       <div className="box-div">
         <div className="box-div-child">
           <h1 className="sign-in-header">Sign In</h1>
-          <form>
-            <input className="sign-in-input" type="text" placeholder="Username" />
-            <input className="sign-in-input" type="password" placeholder="Password" />
-            <button className="sign-in-button" onClick={onClickHandler}>
+          <form onSubmit={onSignIn}> {/* Add onSubmit event handler */}
+            <input
+              className="sign-in-input"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <input
+              className="sign-in-input"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className="sign-in-button" type="submit"> {/* Add type="submit" to the button */}
               Sign In
             </button>
           </form>
         </div>
-        <div className="box-div-child">
-          <div className="color-div">
-            <h1 className="sign-up-header">Create Account</h1>
-            <form>
-              <input className="sign-in-input" type="text" placeholder="Username" />
-              <input className="sign-in-input" type="password" placeholder="Password" />
-              {/* <input className="sign-in-input" type="password" placeholder="Confirm Password" /> */}
-              <button className="sign-in-button">Sign Up</button>
-            </form>
-          </div>
-        </div>
+        {/* ... (other parts of the component) */}
       </div>
     </div>
   );
