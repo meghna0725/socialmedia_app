@@ -22,4 +22,30 @@ public class UserController {
         String responseMessage = "Received username: " + username + "\nReceived password: " + password;
         return new ResponseEntity<>(responseMessage, HttpStatus.OK);
     }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/signup")
+    public ResponseEntitiy<String> signUp(@RequestBody SignInRequest signInRequest) {
+        String username = signInRequest.getUsername();
+        String password = signInRequest.getPassword();
+
+        // search neo4j for username
+        // if username exists, return error
+        // else, create user
+        
+    }
+
+    @CrossOrigin(origins = "http://localhost:3000")
+    @PostMapping("/create_post")
+    public ResponseEntity<String> createPost(@RequestBody SignInRequest signInRequest) {
+        String username = signInRequest.getUsername();
+        String password = signInRequest.getPassword();
+
+        System.out.println("Received username: " + username);
+        System.out.println("Received password: " + password);
+
+        String responseMessage = "Received username: " + username + "\nReceived password: " + password;
+        return new ResponseEntity<>(responseMessage, HttpStatus.OK);
+    }
+
 }

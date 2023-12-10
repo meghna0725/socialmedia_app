@@ -49,13 +49,32 @@ a {
 
 .features-container {
     text-align: right;
+    display: flex;
+    padding-left: 70%;
+    padding-top: 10px;
 }
 
-/* center div */
+.create-post-container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.all-post-container {
+    text-align: center;
+    margin-left: 50%;
+}
+
+.post-div {
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* center div
 .post-container {
     padding: 40px;
     margin-left: 20px;
-}
+} */
 
 .input-post {
     border-radius: 20px;
@@ -72,6 +91,25 @@ a {
 }
 
 .post-button {
+    background-color: purple;
+    color: lightgrey;
+    font-family: monospace;
+    border-radius: 20px;
+    height: 20px;
+    width: 50px;
+}
+
+.input-search {
+    border-radius: 20px;
+    border-color: purple;
+    width: 200px;
+    height: 30px;
+    font-family: monospace;
+    font-size: 15px;
+    padding-left: 6px;
+}
+
+.search-button {
     background-color: purple;
     color: lightgrey;
     font-family: monospace;

@@ -9,6 +9,15 @@ import '../styles/Dashboard.css';
 
 const Dashboard = () => {
 
+    // TODO get request to backend to get posts and # of posts
+
+    // function to render a post component
+    const render_post = () => {
+        return (
+            <Post content="Content" author="Author" timestamp="Timestamp" />
+        );
+    }
+
     return (
         <div className="dashboard-container">
             <Navbar />
@@ -20,6 +29,9 @@ const Dashboard = () => {
 
             <div className="create-post-container">
                 <CreatePost />
+            </div>
+            <div className="all-posts-container">
+                {render_post()}
             </div>
         </div>
     );

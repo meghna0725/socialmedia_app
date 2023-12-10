@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Navbar from '../components/Dashboard/Navbar';
+import MessagesNavbar from '../components/Messages/MessagesNavbar';
 
 const MessagesPage = () => {
     return (
         <div>
-            <h1>Messages Page</h1>
             <Navbar />
+            <MessagesNavbar />
         </div>
     );
 };

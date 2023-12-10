@@ -1,23 +1,13 @@
 import React from "react";
 import '../styles/Dashboard.css';
+import '../styles/Post.css';
 
 // a component that is a single post styled as a post bubble with a title, content, and author
 
 interface PostProps {
-    title: string;
     content: string;
-    //author: string;
-    //timestamp: string;
-}
-
-// function to add a zoom animation to the post on hover
-function animatePost() {
-    const post = document.getElementsByClassName("post")[0];
-    post.classList.add("animate__animated", "animate__zoomIn");
-    setTimeout(() => {
-        post.classList.remove("animate__animated", "animate__zoomIn");
-    }
-    , 1000);
+    author: string;
+    timestamp: string;
 }
 
 
@@ -25,9 +15,10 @@ function animatePost() {
 
 const Post = (props: PostProps) => {
     return (
-        <div className="post-container">
-            <h1 className="post-title">{props.title}</h1>
+        <div className="post-div">
+            <p className="post-author">{props.author}</p>
             <p className="post-content">{props.content}</p>
+            <p className="post-timestamp">{props.timestamp}</p>
         </div>
     );
 }
